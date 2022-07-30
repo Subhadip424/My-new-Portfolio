@@ -19,7 +19,7 @@ const About = () => {
           <div className='about__cards'>
             <div className='about__card'>
               <h5>Experience</h5>
-              <small>2 years Working</small>
+              <small>1 years Working</small>
             </div>
 
           </div>
