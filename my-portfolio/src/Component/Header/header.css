@@ -55,10 +55,10 @@ header{
 /* ===================me====================== */
 
 .me{
-    background: linear-gradient(var(--color-primary),transparent);
+    /* background: linear-gradient(var(--color-primary),transparent); */
     width: 22rem;
     height: 30rem ;
-    position: absolute;
+    position:absolute;
     left:calc(50% - 11rem);
     margin-top: 4rem;
     border-radius: 12rem 12rem 0 0;
@@ -66,3 +66,25 @@ header{
     padding: 0;
 }
 
+/* =================Media Queries(medium devices)=============== */
+
+@media screen and (max-width:1024px) {
+    header{
+        height: 130vh;
+    }
+}
+
+
+/* =================Media Queries(small devices)=============== */
+
+@media screen and (max-width:600px) {
+    header{
+        height: 150vh;
+    }
+
+    .header__social,
+    .scroll__down{
+        display: none;
+    }
+
+}
