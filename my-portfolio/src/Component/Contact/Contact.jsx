@@ -2,9 +2,25 @@ import React from 'react'
 import './contact.css'
 import {MdOutlineMail} from 'react-icons/md'
 import {BsWhatsapp} from 'react-icons/bs'
+import { useRef } from 'react';
+import emailjs from 'emailjs-com'
 
 
 const Contact = () => {
+  const form = useRef();
+  
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_3z8xs7a', 'template_uskslak', form.current, 'R1R22VgvaQjHQrpUz')
+
+    e.target.reset()
+      // .then((result) => {
+      //     console.log(result.text);
+      // }, (error) => {
+      //     console.log(error.text);
+      // });
+  };
   return (
     <section id='contact'>
       <h5>Get in Touch</h5>
@@ -27,7 +43,7 @@ const Contact = () => {
       </div>
 
       {/* END OF CONTACT OPTION */}
-      <form action=''>
+      <form ref={form} onSubmit={sendEmail}>
         <input type="text" name='name' placeholder='Your Full Name' required/>
         <input type="email" name='email' placeholder='Your Email' required/>
         <textarea name="message" id='' rows='7' placeholder='Your Message' required/>

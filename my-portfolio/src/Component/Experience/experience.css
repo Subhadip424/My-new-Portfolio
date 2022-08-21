@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .experience__container > div{
@@ -20,13 +21,13 @@
 
 .experience__container > div h3{
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: var(--color-primary);
 }
 
 .experience__content{
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    /* grid-template-columns: 1fr 1fr ; */
     row-gap: 2rem;
 }
 
